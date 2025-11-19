@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Homepage</title>
+    <style>
+        /* Reset and Base Styles */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --secondary-text: #666666;
+            --link-color: #111111; /* Minimalist black links */
+            --accent-color: #333333;
+            --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --max-width: 680px; /* Typical reading width for research blogs */
+            --spacing-unit: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Layout Container */
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: var(--text-color);
+            letter-spacing: -0.02em;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-color);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+
+        .meta {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        /* Links in text */
+        p a {
+            color: var(--link-color);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 1px;
+        }
+
+        p a:hover {
+            text-decoration-thickness: 2px;
+        }
+
+        /* Simple List for Projects/Writing */
+        .item-list {
+            list-style: none;
+        }
+
+        .item-list li {
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .item-list a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 2px;
+        }
+        
+        .item-list a:hover {
+            border-color: var(--text-color);
+        }
+
+        .item-date {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            font-feature-settings: "tnum";
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 100px;
+            padding: 40px 0;
+            border-top: 1px solid #eee;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+        }
+        
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="container">
+        <a href="#" class="logo">Your Name</a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#writing">Writing</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Hello, I'm [Your Name].</h1>
+        <div class="meta">
+            <span>Based in [City, Country]</span>
+            <span>•</span>
+            <span>[Your Role/Title]</span>
+        </div>
+
+        <p>
+            I am a [Job Title] working on [Specific Field]. Previously, I was at [Company/University].
+            I'm interested in building tools that help people [Your Mission].
+        </p>
+        <p>
+            You can find me on <a href="#">Twitter/X</a>, <a href="#">GitHub</a>, or email me at <a href="mailto:email@example.com">email@example.com</a>.
+        </p>
+
+        <h2 class="section-title" id="projects">Selected Work</h2>
+        <p>
+            Here is a selection of projects I've worked on recently. They focus on [Theme of your work].
+        </p>
+        
+        <ul class="item-list">
+            <li>
+                <a href="#">Project Alpha</a>
+                <span class="item-date">2024</span>
+            </li>
+            <li>
+                <a href="#">Beta Experiment</a>
+                <span class="item-date">2023</span>
+            </li>
+            <li>
+                <a href="#">Gamma Framework</a>
+                <span class="item-date">2023</span>
+            </li>
+        </ul>
+
+        <h2 class="section-title" id="writing">Writing</h2>
+        <p>
+            Thoughts on technology, design, and research.
+        </p>
+
+        <ul class="item-list">
+            <li>
+                <a href="#">Reflections on [Topic]</a>
+                <span class="item-date">Oct 2024</span>
+            </li>
+            <li>
+                <a href="#">How I built [Thing]</a>
+                <span class="item-date">Aug 2024</span>
+            </li>
+            <li>
+                <a href="#">Notes on [Subject]</a>
+                <span class="item-date">Jan 2024</span>
+            </li>
+        </ul>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <span>&copy; 2025 Your Name</span>
+            <nav>
+                <a href="mailto:email@example.com">Email</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
